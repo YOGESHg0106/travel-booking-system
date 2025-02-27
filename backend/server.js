@@ -8,7 +8,7 @@ const { typeDefs, resolvers } = require("./graphql/schema");
 const app = express();
 app.use(
   cors({
-    origin: "https://travel-booking-system-lovat.vercel.app", // ✅ Updated frontend URL
+    origin: "https://travel-booking-system-lovat.vercel.app/",
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true,
