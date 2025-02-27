@@ -6,11 +6,13 @@ const connectDB = require("./config/db");
 const { typeDefs, resolvers } = require("./graphql/schema");
 
 const app = express();
+
+// ✅ Correct CORS Configuration
 app.use(
   cors({
-    origin: "https://travel-booking-system-lovat.vercel.app/",
-    methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization",
+    origin: ["https://travel-booking-system-lovat.vercel.app"], // 🔹 No trailing '/'
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
@@ -27,7 +29,7 @@ async function startServer() {
     console.log(
       `🚀 Server running on ${
         process.env.NODE_ENV === "production"
-          ? "https://travel-booking-system-backend-fugqb5o3q.vercel.app/graphql"
+          ? "https://travel-booking-system-backend.vercel.app/graphql"
           : `http://localhost:${PORT}/graphql`
       }`
     );
