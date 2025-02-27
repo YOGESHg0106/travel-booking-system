@@ -1,0 +1,114 @@
+/* General Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007bff;
+  padding: 12px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Ensures content is not hidden under the navbar */
+.main-content {
+  margin-top: 80px; /* ✅ Prevents overlap */
+  padding: 20px;
+}
+
+/* Logo */
+.navbar h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: white;
+  color: #007bff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  align-self: center;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Burger Menu Icon */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    display: block;
+  }
+
+  .login-btn {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
