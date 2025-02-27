@@ -9,11 +9,12 @@ const app = express();
 app.use(
   cors({
     origin:
-      "https://travel-booking-system-2et2qfpii-yogesh-s-projects-f4fa46e2.vercel.app", // ✅ Allow only frontend
+      "https://travel-booking-system-7v42uea2y-yogesh-s-projects-f4fa46e2.vercel.app", // ✅ Correct frontend URL
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
 );
+
 connectDB();
 
 async function startServer() {
