@@ -8,9 +8,9 @@ const { typeDefs, resolvers } = require("./graphql/schema");
 const app = express();
 app.use(
   cors({
-    origin:
-      "https://travel-booking-system-7v42uea2y-yogesh-s-projects-f4fa46e2.vercel.app", // ✅ Correct frontend URL
+    origin: "https://travel-booking-system-lovat.vercel.app", // ✅ Updated frontend URL
     methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
     credentials: true,
   })
 );
